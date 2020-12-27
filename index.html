@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Billsplitter</title>
+ <!--  <meta name="robots" content="index, follow"> -->
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Damion|Mulish|Bebas+Neue&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD98TIgEeJkaKcioLj-s2hgbBeWCV1tUQE"></script>
+  <!-- <meta property="og:image" content="https://sourabh09.github.io/onthisday/onthisday.png"> -->
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>Bill Splitter</header>
+
+<div class="container">
+  <img id='welcome_img' src="hangout.svg">
+  <div class='welcome_msg'>Click on + button to make a new split.</div>
+  <div class="receipt">
+  <div class="receipt-list">
+    <div class="receipt-item">
+      <div class="place_name"></div>
+      <hr>
+      <div class="receipt-label">Total</div>
+      <div class="receipt-value">--</div>
+    </div>
+  </div>
+</div>
+<div class="input_form">
+      <div class="field_wrapper">
+     <div class="mdl-textfield mdl-js-textfield">
+    <input autocomplete="off" class="mdl-textfield__input" placeholder="Enter place name.." type="text" id="place">
+    <label class="mdl-textfield__label" for="place"></label>
+    </div><br>
+    <div class="mdl-textfield mdl-js-textfield">
+    <input autocomplete="off" id="total_amount" class="mdl-textfield__input" placeholder="Enter total amount.." type="text" pattern="-?[0-9]*(\.[0-9]+)?">
+   <label class="mdl-textfield__label" for="total_amount"></label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div><br>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="added_fields mdl-textfield__input" autocomplete="off" placeholder="Person name.." type="text" name="field_name[]">
+   <label class="mdl-textfield__label" for="sample1"></label>
+    
+  </div><br>
+
+    </div>
+    <button onclick="abc()" type="button" class="mdl-chip split_button">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">clear_all</span> SPLIT</span>
+    </button>
+
+    <button type="button" class="mdl-chip add_button">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">perm_identity</span> ADD PERSON</span>
+    </button>
+
+
+</div>
+
+<div class="splited_amount"></div>
+
+<div class="after_split">
+  <button  type="button" class="mdl-chip confirm_button">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">done</span> CONFIRM SPLIT</span>
+    </button>
+
+    <button  type="button" class="mdl-chip edit_details">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">edit</span> EDIT DETAILS</span>
+    </button><br>
+
+    <button onclick="abc()" type="button" class="mdl-chip split_again">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">replay</span> SPLIT AGAIN</span>
+    </button>
+
+    <button onclick="reload_page()"type="button" class="mdl-chip cancel_split">
+    <span class="mdl-chip__text"><span style="vertical-align: middle;"class="material-icons">clear</span> CANCEL SPLIT</span>
+    </button>
+
+</div>
+<div class="extra"></div>
+
+    <button id="refresh" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+
+</div>
+</body>
+ 
+</html>
