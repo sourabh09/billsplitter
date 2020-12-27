@@ -81,7 +81,7 @@ function abc(){
   alert(total_people);*/
 
   if(names.includes("")){
-    alert("Please provide names in all fields")
+    alert("Please provide data in all fields")
   }else{
 
     var splited = split(total_amount,total_people,5);
@@ -130,8 +130,13 @@ function split(number, sections, min) {
 }
 
 function reload_page(){
-  location.reload();
+
+  var r = confirm("Are you sure to cancel this split?");
+  if (r == true) {
+   location.reload();
+  }
 }
+
 
 /*$('.name_amount').each(function () {
         $(this).prop('Counter',0).animate({
