@@ -142,7 +142,7 @@ text-transform: uppercase;
   border-bottom: 2px dashed #000;
   line-height: 1;
   overflow: hidden;
-  font-family: monospace;
+  font-family: 'Special Elite', cursive;
   font-size: 24px;
   margin-top: 12px;
 }
@@ -190,6 +190,7 @@ padding-top: 36px;
 .mdl-textfield__input{
   outline: none;
   text-transform: capitalize;
+  width: 90%;
 }
 .devided{
   background-color: #222228;
@@ -205,6 +206,7 @@ padding-top: 36px;
   margin:0 auto;
   margin-bottom: 16px;
   font-family: 'Mulish', sans-serif;
+  min-height: 66px;
 }
 .devided>img{
   max-width: 50px;
@@ -216,7 +218,7 @@ padding-top: 36px;
   margin:0 auto;
 }
 #refresh{
-  background-color: #3169DF;
+  background-color: #6C63FF;
   color: #FFF;
   font-weight: bold;
   margin-bottom: 30px;
